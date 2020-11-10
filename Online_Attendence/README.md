@@ -1,4 +1,4 @@
-#Before Running your project run this comment !
+# After cloning your repo run this comment to install laravel requirememt
 <br>
 # 1 ` composer install `
 
