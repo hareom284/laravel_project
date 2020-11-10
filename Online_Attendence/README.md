@@ -1,7 +1,7 @@
 #Before Running your project run this comment !
 <br>
-` composer install `
+# 1 ` composer install `
 <br>
-` cp .env.example .env`
+# 2 ` cp .env.example .env`
 <br>
-`php artisan key:generate`
+#3 ` php artisan key:generate`
