@@ -6,6 +6,6 @@
 
 # 3 ` php artisan key:generate `
 
-# And then you can run below comment :point_down: 
+# :point_down:  :point_down:  And then you can run below comment 
 
 <br> ` php artisan serve `
