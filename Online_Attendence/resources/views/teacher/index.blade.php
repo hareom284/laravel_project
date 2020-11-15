@@ -30,14 +30,33 @@
                               <tr>
                                 <th>#</th>
                                 <th>Name</th>
+                                <th>Email</th>
+                                <th>Subject</th>
+                                <th>Phone</th>
                                 <th>Action</th>
                               </tr>
                           </thead>
                           <tbody>
                              <tr>
                                <td>1</td>
-                               <td>zaw</td>
-                               <td>hare</td>
+                               <td>Zaw Zaw Win</td>
+                               <td>zawzawwinucsl@gmail.com</td>
+                               <td>Java Script</td>
+                               <td>0123434</td>
+                               <td>
+
+                                <a href="#" class="btn btn-success">
+                                 <ion-icon name="reader-outline"></ion-icon>Details
+                                </a>
+                                <a href="#" class="btn btn-success">
+                                 <i class="icofont-edit"></i>Edit
+                                </a>
+                                
+ 
+                                <a href="#" class="btn btn-danger">
+                                 <i class="icofont-delete"></i>Delete
+                                </a>
+                                </td>
                              </tr>
                           </tbody>
                       </table>
@@ -50,8 +69,3 @@
 </main>
     
 @endsection
-
-
-
-    
-  

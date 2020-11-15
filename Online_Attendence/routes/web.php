@@ -22,3 +22,5 @@ Route::get('/admine','AdminController@index')->name('admin');
 Route::resource('teacher', 'TeacherController');
 
 Route::resource('course', 'CourseController');
+
+Route::resource('student', 'StudentController');

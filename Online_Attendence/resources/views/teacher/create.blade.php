@@ -15,41 +15,38 @@
 <div class="x_content">
     <br />
     <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-        <div class="item form-group">
+      <div class="item form-group">
          <label class="col-form-label col-md-3 col-sm-3 label-align" for="photos">Profile <span class="required">*</span>
             <div class="col-md-6 col-sm-6 ">
                <div class="profile-pic offset-md-3 offset-lg-4">
-                 
-                  <img alt="User Pic" id="img" src="https://d30y9cdsu7xlg0.cloudfront.net/png/138926-200.png" id="profile-image1" height="300">
-                  <input type="file" name="image" onchange="preview(event)" id="photos" class="hidden">
-                  
-                  
+                 <img alt="User Pic" id="img" src="https://d30y9cdsu7xlg0.cloudfront.net/png/138926-200.png" id="profile-image1" height="300">
+                  <input type="file" name="image" onchange="preview(event)" id="photos" class="hidden">  
                </div>
                
             </div>
-       </div>
+      </div>
             
-       <div class="item form-group">
+      <div class="item form-group">
           <label class="col-form-label col-md-3 col-sm-3 label-align" for="name">Name <span class="required">*</span>
           </label>
           <div class="col-md-6 col-sm-6 ">
              <input type="text" id="name" required="required" class="form-control" name="name">
           </div>
-       </div>
-       <div class="item form-group">
+      </div>
+      <div class="item form-group">
           <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Email <span class="required">*</span>
           </label>
           <div class="col-md-6 col-sm-6 ">
              <input type="email" id="last-name" name="email" required="required" class="form-control">
           </div>
-       </div>
-       <div class="item form-group">
+      </div>
+      <div class="item form-group">
           <label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align">Password</label>
           <div class="col-md-6 col-sm-6 ">
              <input id="middle-name" class="form-control" type="password" name="password">
           </div>
-       </div>
-       <div class="item form-group">
+      </div>
+      <div class="item form-group">
           <label class="col-form-label col-md-3 col-sm-3 label-align">Gender</label>
           <div class="col-md-6 col-sm-6 ">
              <div id="gender" class="btn-group" data-toggle="buttons">
@@ -61,16 +58,16 @@
                 </label>
              </div>
           </div>
-       </div>
-       <div class="item form-group">
+      </div>
+      <div class="item form-group">
           <label class="col-form-label col-md-3 col-sm-3 label-align" for="degree">Degree<span class="required">*</span>
           </label>
           <div class="col-md-6 col-sm-6 ">
-             <input id="degree" class="date-picker form-control" type="text" required="required" type="text">
+             <input id="degree" class="form-control" type="text" required="required" type="text">
              
           </div>
-       </div>
-       <div class="form-group">
+      </div>
+      <div class="form-group">
         <label class="ol-form-label col-md-3 col-sm-3 label-align ">Select Multiple</label>
         <div class="col-md-6 col-sm-6 ">
             <select class="form-control">
@@ -81,15 +78,15 @@
                <option>Option four</option>
             </select>
          </div>
-     </div>
+      </div>
        <div class="ln_solid"></div>
-       <div class="item form-group">
-          <div class="col-md-6 col-sm-6 offset-md-3">
-             <button class="btn btn-primary" type="button">Cancel</button>
-             <button class="btn btn-primary" type="reset">Reset</button>
-             <button type="submit" class="btn btn-success">Submit</button>
-          </div>
-       </div>
+      <div class="item form-group">
+         <div class="col-md-6 col-sm-6 ">
+            
+            
+            <button type="submit" class="btn btn-success btn-block">Submit</button>
+         </div>
+      </div>
     </form>
  </div>
 </main>
