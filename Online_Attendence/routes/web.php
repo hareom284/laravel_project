@@ -20,7 +20,13 @@ Route::get('/', function () {
 
 
 
+
+
+
+
+
 Route::resource('attendance','AttendanceController');
+
 
 
 Route::get('/admine','AdminController@index')->name('admin');
