@@ -26,7 +26,7 @@ class CreateStudentsTable extends Migration
                     ->on('courses')
                     ->onDelete('cascade');
             $table->integer('phone_no');
-            $table->integer('roll_no');
+            $table->text('roll_no');
             $table->text('profile');
             $table->text('address');
             $table->text('gender');
