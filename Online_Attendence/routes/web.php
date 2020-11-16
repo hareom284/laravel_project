@@ -16,3 +16,27 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('frontend/index');
 });
+
+
+
+
+
+
+
+
+
+Route::resource('attendance','AttendanceController');
+
+
+
+Route::get('/admine','AdminController@index')->name('admin');
+
+Route::resource('teacher', 'TeacherController');
+
+Route::resource('course', 'CourseController');
+
+Route::resource('student', 'StudentController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
