@@ -13,25 +13,13 @@
     <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
     <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
     <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-    <title>Blank Page - Vali Admin</title>
+    <title>Student Attendance System</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- fav icon font  --}}
     <!-- Favicon-->
-    <link rel="apple-touch-icon" sizes="57x57" href="{{asset('backend/favicon/apple-icon-57x57.png')}}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{asset('backend/favicon/apple-icon-60x60.png')}}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{asset('backend/favicon/apple-icon-72x72.png')}}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('backend/favicon/apple-icon-76x76.png')}}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{asset('backend/favicon/apple-icon-114x114.png')}}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{asset('backend/favicon/apple-icon-120x120.png')}}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{asset('backend/favicon/apple-icon-144x144.png')}}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{asset('backend/favicon/apple-icon-152x152.png')}}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('backend/favicon/apple-icon-180x180.png')}}">
-    <link rel="icon" type="image/png" sizes="192x192"  href="{{asset('backend/favicon/android-icon-192x192.png')}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('backend/favicon/favicon-32x32.png')}}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{asset('backend/favicon/favicon-96x96.png')}}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('backend/favicon/favicon-16x16.png')}}">
+    
     {{-- end favicon font  --}}
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('backend/css/main.css')}}">
@@ -43,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="{{('backend/icon/icofont/icofont.min.css')}}">
         <!-- Boxicon CSS -->')}}
     <link rel="stylesheet" type="text/css" href="{{('backend/icon/boxicons-master/css/boxicons.min.css')}}">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   </head>
   <body class="app sidebar-mini">
     <!-- Navbar-->
@@ -117,7 +106,7 @@
       <ul class="app-menu">
                 
         <li>
-            <a class="app-menu__item" href="dashboard.html">
+            <a class="app-menu__item" href="#">
                 <i class="app-menu__icon icofont-dashboard"></i>
                 <span class="app-menu__label">
                     Dashboard
@@ -126,8 +115,8 @@
         </li>
 
         <li>
-            <a class="app-menu__item" href="#">
-              <ion-icon name="person-add" size="large"></ion-icon>
+            <a class="app-menu__item" href="{{ route('teacher.index') }}">
+              <i class="icofont-teacher"></i>
             
               <span class="app-menu__label">
                     Teacher
@@ -135,14 +124,23 @@
             </a>
         </li>
 
+        
         <li>
-            <a class="app-menu__item" href="user.php">
-                <i class="app-menu__icon icofont-users-social"></i>
-                <span class="app-menu__label">
-                    Student
-                </span>
-            </a>
-        </li>
+          <a class="app-menu__item" href="{{ route('course.index') }}">
+            <i class="icofont-book-alt"></i>
+              <span class="app-menu__label">
+                  Course
+              </span>
+          </a>
+      </li>
+      <li>
+        <a class="app-menu__item" href="{{ route('student.index') }}">
+            <i class="app-menu__icon icofont-users-social"></i>
+            <span class="app-menu__label">
+                Student
+            </span>
+        </a>
+    </li>
 
        
     
@@ -176,6 +174,6 @@
       }
     </script>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-
+    @yield('script')
   </body>
 </html>

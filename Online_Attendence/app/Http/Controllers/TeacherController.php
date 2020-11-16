@@ -12,9 +12,14 @@ class TeacherController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('teacher.index');
-    }
+        {
+            return view('teacher.index');
+
+        }
+
+
+       
+
 
     /**
      * Show the form for creating a new resource.
@@ -23,7 +28,9 @@ class TeacherController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('teacher.create');
+
     }
 
     /**
