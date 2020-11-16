@@ -17,5 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admine','AdminController@index')->name('admin');
+Route::get('/admin','AdminController@index')->name('admin');
 Route::get('/teacher','TeacherController@index')->name('teacher');
+Route::resource('attendance','AttendanceController');
+
+// Route::get('attendanceaction','AttendanceController@attendanceaction')->name('attendanceaction');

@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Attendance;
 use Illuminate\Http\Request;
+use App\Student;
+use App\User;
 
-class TeacherController extends Controller
+class AttendanceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -12,8 +15,10 @@ class TeacherController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('teacher.index');
+    {   
+        $students = Student::all();
+        $users = User::all();
+        return view('attendance.index',compact('students','users'));
     }
 
     /**
@@ -40,10 +45,10 @@ class TeacherController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Attendance  $attendance
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Attendance $attendance)
     {
         //
     }
@@ -51,10 +56,10 @@ class TeacherController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Attendance  $attendance
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Attendance $attendance)
     {
         //
     }
@@ -63,10 +68,10 @@ class TeacherController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Attendance  $attendance
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Attendance $attendance)
     {
         //
     }
@@ -74,11 +79,15 @@ class TeacherController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Attendance  $attendance
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Attendance $attendance)
     {
         //
+    }
+    public function attendanceaction( Attendance $Attendance)
+    {
+        return view('attendance.attendanceaction');
     }
 }

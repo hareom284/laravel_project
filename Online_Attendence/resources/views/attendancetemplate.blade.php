@@ -43,6 +43,7 @@
     <link rel="stylesheet" type="text/css" href="{{('backend/icon/icofont/icofont.min.css')}}">
         <!-- Boxicon CSS -->')}}
     <link rel="stylesheet" type="text/css" href="{{('backend/icon/boxicons-master/css/boxicons.min.css')}}">
+    <script src="https://kit.fontawesome.com/aa57437611.js" crossorigin="anonymous"></script>
   </head>
   <body class="app sidebar-mini">
     <!-- Navbar-->
@@ -115,20 +116,9 @@
         </div>
       </div>
       <ul class="app-menu">
-                
-       {{--  <li>
-            <a class="app-menu__item" href="dashboard.html">
-                <i class="app-menu__icon icofont-dashboard"></i>
-                <span class="app-menu__label">
-                    Dashboard
-                </span>
-            </a>
-        </li> --}}
-
         <li>
             <a class="app-menu__item" href="#">
-              {{-- <ion-icon name="person-add" size="large"></ion-icon> --}}
-            
+            <i class="fas fa-eye" size="larger"></i>&nbsp;
               <span class="app-menu__label">
                     View Attendance
                 </span>
@@ -137,11 +127,12 @@
         </li>
          <li>
             <a class="app-menu__item" href="#">
-              {{-- <ion-icon name="person-add" size="large"></ion-icon> --}}
+             <i class="far fa-calendar-check " size="larger"></i>&nbsp;
             
               <span class="app-menu__label">
                     Check Attendance
                 </span>
+                
                
             </a>
         </li>
@@ -180,6 +171,7 @@
       }
     </script>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    @yield('script')
 
   </body>
 </html>
