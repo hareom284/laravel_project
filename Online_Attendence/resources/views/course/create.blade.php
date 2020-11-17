@@ -14,40 +14,53 @@
     </div>
 <div class="x_content">
     <br />
-    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-        <div class="item form-group">
-         <label class="col-form-label col-md-3 col-sm-3 label-align" for="photos">Phone <span class="required">*</span>
+    <form  action="{{route('course.store') }}" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" enctype="multipart/form-data">
+      @csrf  
+      <div class="item form-group">
+         <label class="col-form-label col-md-3 col-sm-3 label-align" for="photos">Course Logo <span class="required">*</span>
             <div class="col-md-6 col-sm-6 ">
-               <div class="profile-pic offset-md-3 offset-lg-4">
-                 
-                  <img alt="User Pic" id="img" src="https://d30y9cdsu7xlg0.cloudfront.net/png/138926-200.png" id="profile-image1" height="300">
-                  <input type="file" name="image" onchange="preview(event)" id="photos" class="hidden">
+               <div class=" offset-md-3 offset-lg-4">
+                 <div class="profile-pic">
+                  <img alt="User Pic" id="img" src="https://previews.123rf.com/images/luka007/luka0071601/luka007160100985/50665073-add-book-icon.jpg" id="profile-image1" height="300">
+                  <input type="file" name="photo" onchange="preview(event)" id="photos" class="hidden @error('photo') is-invalid @enderror">
+                 </div>
                   
-                  
+                  @error('photo')
+                  <div class="alert alert-danger">{{ $message }}</div>
+                  @enderror
                </div>
                
             </div>
-       </div>
+      </div>
             
        <div class="item form-group">
           <label class="col-form-label col-md-3 col-sm-3 label-align" for="name">Name <span class="required">*</span>
           </label>
           <div class="col-md-6 col-sm-6 ">
-             <input type="text" id="name" required="required" class="form-control" name="name">
+             <input type="text" id="name" required="required" class="form-control @error('name') is-invalid @enderror" name="name">
+             @error('name')
+                  <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
           </div>
        </div>
        <div class="item form-group">
           <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">No_of_times (Period)<span class="required">*</span>
           </label>
           <div class="col-md-6 col-sm-6 ">
-             <input type="number"  name="no_of_times" required="required" class="form-control" minlength="0">
+             <input type="number"  name="no_of_times" required="required" class="form-control @error('no_of_times') is-invalid @enderror" minlength="0">
+             @error('no_of_times')
+                  <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
           </div>
        </div>
        <div class="item form-group">
-        <label class="col-form-label col-md-3 col-sm-3 label-align" for="description">Description<span class="required">*</span>
+        <label class="col-form-label col-md-3 col-sm-3 label-align" for="description">Description<span class="required ">*</span>
         </label>
         <div class="col-md-6 col-sm-6 ">
-            <textarea class="form-control" id="description"></textarea>
+            <textarea class="form-control" id="description" name="description" class="@error('description') is-invalid @enderror"></textarea>
+            @error('description')
+                  <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
        </div>
        

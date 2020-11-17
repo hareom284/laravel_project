@@ -25,7 +25,7 @@ class CreateStudentsTable extends Migration
                     ->references('id')
                     ->on('courses')
                     ->onDelete('cascade');
-            $table->integer('phone_no');
+            $table->text('phone_no');
             $table->text('roll_no');
             $table->text('profile');
             $table->text('address');
