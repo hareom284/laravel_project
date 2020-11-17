@@ -24,9 +24,10 @@ Route::get('teacherdetail','FrontendController@teacherdetail')->name('teacherdet
 
 
 
-
+// ========= By KZW ==========
 
 Route::resource('attendance','AttendanceController');
+Route::resource('checkattendance','CheckattendanceController');
 
 
 

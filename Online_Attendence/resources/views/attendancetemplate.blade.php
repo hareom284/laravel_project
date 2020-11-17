@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta name="description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Twitter meta-->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:site" content="@pratikborsadiya">
@@ -117,7 +118,7 @@
       </div>
       <ul class="app-menu">
         <li>
-            <a class="app-menu__item" href="#">
+            <a class="app-menu__item" href="{{route('attendance.index')}}">
             <i class="fas fa-eye" size="larger"></i>&nbsp;
               <span class="app-menu__label">
                     View Attendance
@@ -126,7 +127,7 @@
             </a>
         </li>
          <li>
-            <a class="app-menu__item" href="#">
+            <a class="app-menu__item" href="{{route('checkattendance.index')}}">
              <i class="far fa-calendar-check " size="larger"></i>&nbsp;
             
               <span class="app-menu__label">
@@ -171,7 +172,7 @@
       }
     </script>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @yield('script')
-
   </body>
 </html>

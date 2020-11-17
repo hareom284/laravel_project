@@ -8,4 +8,10 @@ class Course extends Model
 {
      protected $fillable=['name','photo','no_of_times','description'];
 
+
+     public function students()
+     {
+     	return $this->hasMany('App\Student');
+     }
+
 }
