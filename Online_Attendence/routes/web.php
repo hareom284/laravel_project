@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('frontend/index');
 });
 
+Route::get('teacherdetail','FrontendController@teacherdetail')->name('teacherdetail');
 
 
 

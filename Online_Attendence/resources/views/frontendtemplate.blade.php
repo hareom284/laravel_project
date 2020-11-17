@@ -23,7 +23,7 @@
       </div>
     </nav>
   </div>
-  @yield('content')
+  @yield('content') 
 </body>
 <script src="{{asset('my_asset/bootstrap/js/jquery.min.js')}}"></script>
 <script src="{{asset('my_asset/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
