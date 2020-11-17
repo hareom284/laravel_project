@@ -117,7 +117,7 @@
       </div>
       <ul class="app-menu">
         <li>
-            <a class="app-menu__item" href="#">
+            <a class="app-menu__item" href="{{route('attendance.index')}}">
             <i class="fas fa-eye" size="larger"></i>&nbsp;
               <span class="app-menu__label">
                     View Attendance
@@ -126,7 +126,7 @@
             </a>
         </li>
          <li>
-            <a class="app-menu__item" href="#">
+            <a class="app-menu__item" href="{{route('checkattendance.index')}}">
              <i class="far fa-calendar-check " size="larger"></i>&nbsp;
             
               <span class="app-menu__label">
@@ -171,7 +171,8 @@
       }
     </script>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     @yield('script')
-
+    @include('sweetalert::alert');
   </body>
 </html>

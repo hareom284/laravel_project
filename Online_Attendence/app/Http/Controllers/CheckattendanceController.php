@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Attendance;
 use Illuminate\Http\Request;
 use App\Student;
 use App\User;
 
-class AttendanceController extends Controller
+class CheckattendanceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +14,9 @@ class AttendanceController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
+    {
         $students = Student::all();
-        
-        return view('attendance.index',compact('students'));
+        return view('checkattendance.index',compact('students'));
     }
 
     /**
@@ -45,21 +43,21 @@ class AttendanceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Attendance  $attendance
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Attendance $attendance)
+    public function show($id)
     {
-        //
+        return view('checkattendance.show');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Attendance  $attendance
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Attendance $attendance)
+    public function edit($id)
     {
         //
     }
@@ -68,10 +66,10 @@ class AttendanceController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Attendance  $attendance
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Attendance $attendance)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -79,15 +77,11 @@ class AttendanceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Attendance  $attendance
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Attendance $attendance)
+    public function destroy($id)
     {
         //
-    }
-    public function attendanceaction( Attendance $Attendance)
-    {
-        return view('attendance.attendanceaction');
     }
 }

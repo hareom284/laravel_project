@@ -1,14 +1,13 @@
- 
 
 
- {{-- For Attendance Check --}}
+{{-- For Student Detail --}}
 
 
 
-@extends('attendance')
-
+@extends('attendancetemplate')
 
 @section('content')
+
 <main class="app-content">
   <div class="app-title">
     <div>
@@ -20,20 +19,19 @@
       <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
     </ul>
   </div>
-  <table class="table table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">Studen Name</th>
-      <th scope="col">Roll Number</th>
-      <th scope="col">Course</th>
-      <th scope="col">Attendance Status</th>
-    </tr>
-  </thead>
-  <tbody>
+
    
-  </tbody>
-</table>
   
 </main>
+
+    
+@endsection
+
+@section('script')
+    <script type="text/javascript" src="{{asset('backend/js/plugins/jquery.dataTables.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('backend/js/plugins/dataTables.bootstrap.min.js')}}"></script>
+    <script type="text/javascript">
+      $('.dataTable').DataTable();
+  </script>
 
 @endsection

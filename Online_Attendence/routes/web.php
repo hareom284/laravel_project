@@ -23,9 +23,10 @@ Route::get('/', function () {
 
 
 
-
+// ========= By KZW ==========
 
 Route::resource('attendance','AttendanceController');
+Route::resource('checkattendance','CheckattendanceController');
 
 
 
