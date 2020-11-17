@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Student;
 use App\User;
+use App\Attendacne;
+
 
 class CheckattendanceController extends Controller
 {
@@ -35,9 +37,30 @@ class CheckattendanceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request )
     {
-        //
+        // // dd($request);
+        // $studentid =$request->studentid;
+        // $courseid = $request->courseid;
+        // $tvalue = $request->tvalue;
+        // $mcount = 0;
+        // if ($tvalue= "one") {
+        //     $scount=1;
+        // }else{
+        //     $scount=0;
+        // }
+        // $mcount+=$scount;
+
+
+        // $attendacne = new Attendacne;
+        // $attendance->count = $mcount;
+        // $attendance->course_id = $courseid;
+        // $attendance->student_id = $studentid;
+        // $attendance->save();
+
+
+        // return 'Successful You Order';
+        
     }
 
     /**

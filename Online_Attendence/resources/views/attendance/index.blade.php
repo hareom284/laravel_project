@@ -35,8 +35,9 @@
       <table class="table mt-3 table-bordered dataTable">
         <thead>
           <tr>
-            <th>Student Name</th>
+            
             <th>Roll Number</th>
+            <th>Student Name</th>
             <th>Course</th>
             <th>Attendance Status</th>
             <th>Report</th>
@@ -48,10 +49,9 @@
          
          
           <tr>
-            
-            <td>{{$student->user->name}}</td>
             <td>{{$student->roll_no}}</td>
-            <td>{{$student->course_id}}</td>
+            <td>{{$student->user->name}}</td>
+            <td>{{$student->course->name}}</td>
             <td></td>
             <td>
             <a href="#" class="btn btn-info">Detail</a>

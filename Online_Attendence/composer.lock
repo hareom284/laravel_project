@@ -4,9 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-
-    "content-hash": "16c6992f557d76979d4ea0fc35fb4283",
-
+    "content-hash": "6c4d9ff2f1100d4d529c39d522942616",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2213,27 +2211,6 @@
             "time": "2020-08-18T17:17:46+00:00"
         },
         {
-<<<<<<< HEAD
-            "name": "realrashid/sweet-alert",
-            "version": "v3.1.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/realrashid/sweet-alert.git",
-                "reference": "94415e288bf38e482cc645030800c0a8591c9624"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/realrashid/sweet-alert/zipball/94415e288bf38e482cc645030800c0a8591c9624",
-                "reference": "94415e288bf38e482cc645030800c0a8591c9624",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/framework": "^5.4|^6.0|^7.0|^8.0",
-                "php": "^7.2"
-            },
-            "require-dev": {
-                "symfony/thanks": "^1.0"
-=======
             "name": "spatie/laravel-permission",
             "version": "3.17.0",
             "source": {
@@ -2258,37 +2235,21 @@
                 "orchestra/testbench": "^3.8|^4.0|^5.0|^6.0",
                 "phpunit/phpunit": "^8.0|^9.0",
                 "predis/predis": "^1.1"
->>>>>>> 7928268ff4398159a71a7a090dde0df0b68c2199
             },
             "type": "library",
             "extra": {
                 "laravel": {
                     "providers": [
-<<<<<<< HEAD
-                        "RealRashid\\SweetAlert\\SweetAlertServiceProvider"
-                    ],
-                    "aliases": {
-                        "Alert": "RealRashid\\SweetAlert\\Facades\\Alert"
-                    }
-=======
                         "Spatie\\Permission\\PermissionServiceProvider"
                     ]
->>>>>>> 7928268ff4398159a71a7a090dde0df0b68c2199
                 }
             },
             "autoload": {
                 "psr-4": {
-<<<<<<< HEAD
-                    "RealRashid\\SweetAlert\\": "src/"
-                },
-                "files": [
-                    "src/functions.php"
-=======
                     "Spatie\\Permission\\": "src"
                 },
                 "files": [
                     "src/helpers.php"
->>>>>>> 7928268ff4398159a71a7a090dde0df0b68c2199
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2297,51 +2258,6 @@
             ],
             "authors": [
                 {
-<<<<<<< HEAD
-                    "name": "Rashid Ali",
-                    "email": "realrashid05@gmail.com",
-                    "homepage": "https://realrashid.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A BEAUTIFUL, RESPONSIVE, CUSTOMIZABLE, ACCESSIBLE (WAI-ARIA) REPLACEMENT FOR JAVASCRIPT'S POPUP BOXES FOR LARAVEL BY RASHID ALI",
-            "homepage": "https://github.com/realrashid/sweet-alert",
-            "keywords": [
-                "alert",
-                "laravel",
-                "laravel-package",
-                "notifier",
-                "noty",
-                "sweet-alert",
-                "sweet-alert2",
-                "toast"
-            ],
-            "support": {
-                "docs": "https://realrashid.github.io/sweet-alert/",
-                "email": "realrashid05@gmail.com",
-                "issues": "https://github.com/realrashid/sweet-alert/issues",
-                "source": "https://github.com/realrashid/sweet-alert"
-            },
-            "funding": [
-                {
-                    "url": "https://ko-fi.com/realrashid",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.buymeacoffee.com/realrashid",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://issuehunt.io/r/realrashid",
-                    "type": "issuehunt"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/realrashid/sweet-alert",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2020-09-09T15:24:03+00:00"
-=======
                     "name": "Freek Van der Herten",
                     "email": "freek@spatie.be",
                     "homepage": "https://spatie.be",
@@ -2360,6 +2276,10 @@
                 "security",
                 "spatie"
             ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-permission/issues",
+                "source": "https://github.com/spatie/laravel-permission/tree/3.17.0"
+            },
             "funding": [
                 {
                     "url": "https://spatie.be/open-source/support-us",
@@ -2367,7 +2287,6 @@
                 }
             ],
             "time": "2020-09-16T16:47:18+00:00"
->>>>>>> 7928268ff4398159a71a7a090dde0df0b68c2199
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -7021,5 +6940,5 @@
         "php": "^7.2.5|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }

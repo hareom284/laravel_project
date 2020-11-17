@@ -28,7 +28,7 @@ class AttendanceController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -39,7 +39,27 @@ class AttendanceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         // dd($request);
+        $studentid =$request->studentid;
+        $courseid = $request->courseid;
+        $tvalue = $request->tvalue;
+        $mcount = 0;
+        if ($tvalue= "one") {
+            $scount=1;
+        }else{
+            $scount=0;
+        }
+        $mcount+=$scount;
+
+
+        $checkattendacne = new Attendacne;
+        $checkattendance->count = $mcount;
+        $checkattendance->course_id = $courseid;
+        $checkattendance->student_id = $studentid;
+        $checkattendance->save();
+
+
+        return 'Successful You Order';
     }
 
     /**
