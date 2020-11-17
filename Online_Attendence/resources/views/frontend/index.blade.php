@@ -47,32 +47,61 @@
 			</div>
 		</div>
 </div>
-<!-- <div class="container">
-	<h3 class="text-center">Our Teachers</h3>
-	<hr class="hr">
-		<div class="row teacher my-1">
-			<div class="col-lg-4 col-md-6">
-				<a href=""><img class="" src="{{asset('my_asset/images/t1.jpg')}}"></a>
-			</div>
-			<div class="overlay">
-				 <div class="text">Hello World</div>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<a href=""><img src="{{asset('my_asset/images/t2.jpg')}}"></a>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<a href=""><img src="{{asset('my_asset/images/t3.jpg')}}"></a>
-			</div>
-			<div class="col-lg-4 col-md-6">
-				<a href=""><img src="{{asset('my_asset/images/t4.jpg')}}"></a>
-			</div>
+<!--header-->
+<div class="content">
+	<!--team-->
+	<div class="team">
+		<div class="container-fluid" style="background-color: #64FFDA;">
+			<h3 class="text-center">Our Teachers</h3>
+			<hr class="hr">
+			<ul class="ch-grid">
+				<li>
+					<div class="ch-item">				
+						<div class="ch-info">
+							<div class="ch-info-front ch-img-1"></div>
+							<div class="ch-info-back">
+									<h4>Mr.Kyaw Zin</h4>
+								<p>by Alexander Shumihin <a href="{{route('teacherdetail')}}">View Profile</a></p>
+							</div>	
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item">
+						<div class="ch-info">
+							<div class="ch-info-front ch-img-2"></div>
+							<div class="ch-info-back">
+									<h4>Mis.Lae Lae</h4>
+								<p>by Zoe Ingram  <a href="{{route('teacherdetail')}}">View Profile</a></p>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="ch-item">
+						<div class="ch-info">
+							<div class="ch-info-front ch-img-3"></div>
+							<div class="ch-info-back">
+									<h4>Mis.Moe Moe</h4>
+								<p>by Eileen Tjan <a href="{{route('teacherdetail')}}">View Profile</a></p>
+							</div>
+						</div>
+					</div>
+				</li>
+				 <li>
+					<div class="ch-item">
+						<div class="ch-info">
+							<div class="ch-info-front ch-img-4"></div>
+							<div class="ch-info-back">
+									<h4>Mis.Hnin Si</h4>
+								<p>by Eileen Tjan  <a href="{{route('teacherdetail')}}">View Profile</a></p>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		
 		</div>
-</div> -->
-<div class="container">
-  <img src="{{asset('my_asset/images/t1.jpg')}}" alt="Avatar" class="image">
-  <div class="overlay">
-    <div class="text">Hello World</div>
-  </div>
+	</div><!--/team-->
 </div>
-
 @endsection
