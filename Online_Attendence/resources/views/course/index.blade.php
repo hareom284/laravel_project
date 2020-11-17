@@ -64,3 +64,11 @@
 </main>
     
 @endsection
+
+@section('script')
+<script type="text/javascript" src="{{asset('backend/js/plugins/jquery.dataTables.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('backend/js/plugins/dataTables.bootstrap.min.js')}}"></script>
+<script type="text/javascript">
+  $('.dataTable').DataTable();
+    
+@endsection
