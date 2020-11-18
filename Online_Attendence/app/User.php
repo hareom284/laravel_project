@@ -40,13 +40,12 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Student');
     }
-<<<<<<< HEAD
-=======
+
     public function courses()
     {
         return $this->hasMany('App\Course');
     }
->>>>>>> 30ad1d7f3bda2c36db2011a31c223e77028f31fa
+
     public function teacher()
     {
         return $this->hasOne('App\Teacher');
