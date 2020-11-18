@@ -18,15 +18,23 @@
         <ul class="navbar-nav ml-auto mx-5">
           <!-- <li class="nav-item"><a href="" class="nav-link">Gallery</a></li> -->
           <li class="nav-item"><a href="" class="nav-link">About</a></li>
+
           <li class="nav-item"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
+
+          <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Sign</a></li>
+          <li class="nav-item"><a href="{{ route('student.create') }}" class="nav-link">Sign Up</a></li>
+
+
         </ul>
       </div>
     </nav>
   </div>
   @yield('content') 
   @yield('script')
-</body>
+
 <script src="{{asset('my_asset/bootstrap/js/jquery.min.js')}}"></script>
 <script src="{{asset('my_asset/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
+</body>
 </html>

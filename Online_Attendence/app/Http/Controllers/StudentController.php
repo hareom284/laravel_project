@@ -4,6 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Hash;
+
+use App\Course;
+
+use App\Student;
+
+use App\User;
+
 class StudentController extends Controller
 {
     /**
@@ -12,7 +20,7 @@ class StudentController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {   
         return view('student.index');
     }
 
@@ -22,8 +30,9 @@ class StudentController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    {   
+        $course = Course::all();
+        return view('student.create',compact("course"));
     }
 
     /**
@@ -34,7 +43,63 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "photo" => "required", 
+            "name" => "required|min:5",
+            "email"=>'email:rfc,dns',
+            "password"=>"required",
+            "roll_no"=>"required",
+            "phone"=>"required",
+            "address"=>"required",
+
+        ]);
+
+        if($request->file()) {
+            // 624872374523_a.jpg
+            $fileName = time().'_'.$request->photo->getClientOriginalName();
+
+            // brandimg/624872374523_a.jpg
+            $filePath = $request->file('photo')->storeAs('student_img', $fileName, 'public');
+
+            $path = '/storage/'.$filePath;
+
+            
+
+        }
+        //save to user table
+
+        $user = new User;
+
+        $user->name =  $request->name;
+        $user->email = $request->email;
+
+        $user->password = Hash::make($request->password);
+        
+        $user->save();
+
+        $user->assignRole('student');
+
+        $student = new Student;
+
+        $student->user_id = $user->id;
+
+        $student->course_id = $request->course_name;
+
+        $student->roll_no = $request->roll_no;
+
+        $student->gender = $request->gender;
+
+        $student->phone_no = $request->phone;
+
+        $student->profile = $path;
+
+        $student->address = $request->address;
+
+
+        $student->save();
+
+        return redirect()->route('login');
+
     }
 
     /**
