@@ -21,6 +21,7 @@ Route::get('/','FrontendController@home')->name('mainpage');
 
 Route::get('teacherdetail/{id}','FrontendController@teacherdetail')->name('teacherdetail');
 Route::get('studentdetail','FrontendController@studentdetail')->name('studentdetail');
+Route::get('contact','FrontendController@contact')->name('contact');
 Route::get('signin','FrontendController@signin')->name('signinpage');
 Route::get('signup','FrontendController@signup')->name('signuppage');
 

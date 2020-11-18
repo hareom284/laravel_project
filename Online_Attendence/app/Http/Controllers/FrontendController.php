@@ -21,6 +21,11 @@ class FrontendController extends Controller
         $teachers = Teacher::find($id);
         return view('frontend.teacherdetail',compact('teachers'));
     }
+     public function contact()
+    {
+        // $teacher = Teacher::find($id);
+        return view('frontend.contact');
+    }
     public function studentdetail()
     {
         // $teacher = Teacher::find($id);

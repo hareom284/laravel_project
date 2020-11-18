@@ -16,9 +16,9 @@
       </button>
       <div class="collapse navbar-collapse" id="Nav">
         <ul class="navbar-nav ml-auto mx-5">
-          <li class="nav-item"><a href="" class="nav-link">Gallery</a></li>
+          <!-- <li class="nav-item"><a href="" class="nav-link">Gallery</a></li> -->
           <li class="nav-item"><a href="" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
         </ul>
       </div>
     </nav>
