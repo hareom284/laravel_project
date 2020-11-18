@@ -10,7 +10,7 @@
 <body>
   <div class="bg-img">
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a href="" class="navbar-brand mx-5">Student Attendance</a>
+      <a href="" class="navbar-brand mx-5"><span style="color:#d50000; font-size:30px;">Double</span><span style="color:#AA00FF; font-size:30px;">Vision</span></a>
       <button class="navbar-toggler" data-target="#Nav" data-toggle="collapse">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -21,7 +21,7 @@
 
           <li class="nav-item"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
 
-          <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+         
           <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Sign</a></li>
           <li class="nav-item"><a href="{{ route('student.create') }}" class="nav-link">Sign Up</a></li>
 

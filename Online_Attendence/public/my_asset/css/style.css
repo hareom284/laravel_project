@@ -171,11 +171,11 @@ body{
     background:#282828;
     opacity: 0;
 }
-.ch-img-1 { 
+/*.ch-img-1 { 
     background: url(../images/t1.jpg)no-repeat;
     z-index: 12;
-}
-.ch-img-2 { 
+}*/
+/*.ch-img-2 { 
       background: url(../images/t2.jpg)no-repeat;
     z-index: 11;
 }
@@ -187,7 +187,7 @@ body{
 .ch-img-4 { 
       background: url(../images/t4.jpg)no-repeat;
     z-index: 10;
-}
+}*/
 .ch-info h4 {
     color: #fff;
    font-size: 1.8em;
@@ -397,3 +397,7 @@ body{
     width: 200px;
     height: 200px;
 }   
+/*.ch-img-1 img{
+  margin-right: 50px;
+  margin-bottom: 20px;
+}*/
