@@ -31,12 +31,19 @@
                               </tr>
                           </thead>
                           <tbody>
+                              @php
+                               $i = 0;   
+                              @endphp
+                              @foreach ($students as $item)
+                                  
+                              
                              <tr>
-                               <td>1</td>
-                               <td>Zaw Zaw Win</td>
-                               <td>zawzawwinucsl@gmail.com</td>
-                               <td>Java Script</td>
-                               <td>12-cst</td>
+                                
+                               <td>{{ ++$i }}</td>
+                               <td>{{ $item->user->name }}</td>
+                               <td>{{ $item->user->email }}</td>
+                               <td>{{ $item->course->name }}</td>
+                               <td>{{ $item->roll_no }}</td>
                                <td>
 
                                 <a href="#" class="btn btn-success">
@@ -52,6 +59,7 @@
                                 </a>
                                 </td>
                              </tr>
+                             @endforeach
                           </tbody>
                       </table>
                     </div>

@@ -1,5 +1,6 @@
 @extends('frontendtemplate')
 @section('content')
+<<<<<<< HEAD
 <div class="container">
 	<div class="card detail">
 		<div class="container-fliud">
@@ -11,6 +12,23 @@
 					  <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252" /></div>
 					  <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
 					  <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252" /></div> -->
+=======
+	<div class="container">
+		<div class="card detail">
+			<div class="container-fliud">
+				<div class="wrapper row">
+					<div class="preview col-md-6">
+						
+						<div class="preview-pic tab-content">
+						
+						  <div class="tab-pane active" id="pic-1"><img src="{{asset($teachers->profile)}}" /></div>
+						 <!--  <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
+						  <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252" /></div>
+						  <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
+						  <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252" /></div> -->
+						</div>
+												
+>>>>>>> 8710c9e5e14a9f50aa5401af01055a6f673d393c
 					</div>
 											
 				</div>
