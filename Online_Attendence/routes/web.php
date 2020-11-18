@@ -13,11 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend/index');
-});
+// Route::get('/', function () {
+//     return view('frontend/index');
+// });
+Route::get('/','FrontendController@home')->name('mainpage');
 
-Route::get('teacherdetail','FrontendController@teacherdetail')->name('teacherdetail');
+
+Route::get('teacherdetail/{id}','FrontendController@teacherdetail')->name('teacherdetail');
+Route::get('studentdetail','FrontendController@studentdetail')->name('studentdetail');
 Route::get('signin','FrontendController@signin')->name('signinpage');
 Route::get('signup','FrontendController@signup')->name('signuppage');
 

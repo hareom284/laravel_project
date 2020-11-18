@@ -7,7 +7,7 @@
 					<div class="preview col-md-6">
 						
 						<div class="preview-pic tab-content">
-						  <div class="tab-pane active" id="pic-1"><img src="{{asset('my_asset/images/t1.jpg')}}" /></div>
+						  <div class="tab-pane active" id="pic-1"><img src="{{asset('$teachers->profile')}}" /></div>
 						 <!--  <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
 						  <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252" /></div>
 						  <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
@@ -28,10 +28,11 @@
 							<!-- <span class="review-no">41 reviews</span> -->
 						</div>
 						<p class="product-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam nisi possimus quod sunt unde vitae minus illum perspiciatis ratione incidunt atque voluptatum, animi! Iusto, deleniti voluptatum quos eius minus veniam?</p>
-						<h4 class="price">Name: <span>Mrs.Kyaw Zin</span></h4>
-						<h5 class="price">Phone: <span>09787788471</span></h5>
-						<h5 class="price">Degree: <span>BE.IT</span></h5>
-						<h5 class="price">Gender: <span>Male</span></h5>
+						<h4 class="price">Name: <span>{{$teachers->user->name}}</span></h4>
+						<h5 class="price">Phone: <span>{{$teachers->phone_no}}</span></h5>
+						<h5 class="price">Phone: <span>{{$teachers->user->email}}</span></h5>
+						<h5 class="price">Degree: <span>{{$teachers->degree}}</span></h5>
+						<h5 class="price">Gender: <span>{{$teachers->gender}}</span></h5>
 
 						<!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
 						<h5 class="sizes">sizes:
