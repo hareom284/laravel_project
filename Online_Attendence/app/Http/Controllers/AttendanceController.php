@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
+
+
 use App\Attendance;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Student;
 use App\User;
+
+
 
 class AttendanceController extends Controller
 {
@@ -17,7 +22,8 @@ class AttendanceController extends Controller
     public function index()
     {   
         $students = Student::all();
-
+        
+        
         
         
         return view('attendance.index',compact('students'));

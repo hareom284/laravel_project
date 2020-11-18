@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Student;
 use App\User;
 use App\Course;
@@ -20,6 +21,9 @@ class CheckattendanceController extends Controller
     public function index()
     {   
         $teachers = Teacher::all();
+        // dd(Auth::user()->id);
+        // $teachers = $teachers->find(Auth::user()->id);
+        
         $students = Student::all();
         $courses = Course::all();
         return view('checkattendance.index',compact('students','courses','teachers'));
