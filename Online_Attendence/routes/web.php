@@ -18,6 +18,8 @@ Route::get('/', function () {
 });
 
 Route::get('teacherdetail','FrontendController@teacherdetail')->name('teacherdetail');
+Route::get('signin','FrontendController@signin')->name('signinpage');
+Route::get('signup','FrontendController@signup')->name('signuppage');
 
 
 
@@ -28,6 +30,8 @@ Route::get('teacherdetail','FrontendController@teacherdetail')->name('teacherdet
 
 Route::resource('attendance','AttendanceController');
 Route::resource('checkattendance','CheckattendanceController');
+
+// =====================================================================
 
 
 
@@ -41,4 +45,5 @@ Route::resource('student', 'StudentController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 
