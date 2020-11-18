@@ -28,17 +28,31 @@
                  <h4> Number Of Section :</h4>
                   <span class="badge badge-primary badge-pill"><h6>14</h6></span>
                   <h4> Course Name :</h4>
-                  <span class="badge badge-primary badge-pill"><h6>Software Engineering</h6></span>
+                  
+                    <select name="subject" class="badge badge-primary badge-pill" style="outline: none">
+                      @foreach ($courses as $course)
+                          
+                      
+                      <option value="{{ $course->course_id }}">{{$course->name}}</option>
+
+                      @endforeach
+                    </select>
+
+                  
                
             </ul>
-          
+            
             <table class="table mt-3 table-bordered dataTable">
               <thead>
                 <tr>
                   <th>Student Name</th>
                   <th>Roll Number</th>
                   <th>Course</th>
-                  <th>Attendance</th>
+                  <th>
+                    <button type="button" class="check btn btn-success">Select All</button>
+                    Attendance
+                    
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -49,7 +63,11 @@
                   <td>{{$student->roll_no}}</td>
                   <td>{{$student->user->name}}</td>
                   <td>{{$student->course->name}}</td>
-                  <td><input type="checkbox" value="" id="defaultCheck1"></td> 
+                  <td>
+                    <input type="radio" value="" id="defaultCheck1" class="myCheck" name="{{ $student->id }}">Present
+                    <input type="radio" value="" id="defaultCheck1" class="unCheck" name="{{ $student->id }}">Absent</td>
+                  </td>
+
                 </tr>
                  @endforeach
                 
@@ -72,6 +90,17 @@
     <script type="text/javascript" src="{{asset('backend/js/plugins/dataTables.bootstrap.min.js')}}"></script>
     <script type="text/javascript">
       $('.dataTable').DataTable();
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+  $(document).ready(function(){
+      $(".check").click(function(){
+          $(".myCheck").prop("checked", true);
+      });
+      $(".uncheck").click(function(){
+          $(".unCheck").prop("checked", true);
+      });
+  });
   </script>
   <script type="text/javascript">
     $.ajaxSetup({

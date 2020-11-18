@@ -29,15 +29,25 @@
                           <thead>
                               <tr>
                                 <th>#</th>
+                                <th>Logo</th>
                                 <th>Name</th>
 
                                 <th>Action</th>
                               </tr>
                           </thead>
                           <tbody>
+                            @php 
+                             $i=1;
+                             @endphp
+                             @foreach ($course as $subject)
+                                 
+                             
                              <tr>
-                               <td>1</td>
-                               <td>zaw</td>
+                               <td>{{ $i++ }}</td>
+                               <td>
+                                <img src="{{ $subject->photo }}" width="90px" height="70px">
+                              </td>
+                               <td>{{$subject->name }}</td>
                                <td>
 
                                <a href="#" class="btn btn-success">
@@ -48,11 +58,16 @@
                                </a>
                                
 
-                               <a href="#" class="btn btn-danger">
+                               <form action="{{ route('course.destroy',$subject->id) }}" method="POST" onsubmit="return confirm('❌❌Are you sure to Delete?❌❌')" class="d-inline-block">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">
                                 <i class="icofont-delete"></i>Delete
-                               </a>
+                                </button>
+                               </form>
                                </td>
                              </tr>
+                             @endforeach
                           </tbody>
                       </table>
                     </div>

@@ -38,11 +38,19 @@
                           </thead>
                           <tbody>
                              <tr>
-                               <td>1</td>
-                               <td>Zaw Zaw Win</td>
-                               <td>zawzawwinucsl@gmail.com</td>
-                               <td>Java Script</td>
-                               <td>0123434</td>
+                               @php
+                                 
+                                 $i = 0;
+
+                               @endphp
+                               @foreach ($teacher as $teache)
+                               {{-- $name = Teacher::find($teacher->user_id)))->name;   --}}
+                               
+                               <td>{{ ++$i }}</td>
+                               <td>{{ $teache->user->name }}</td>
+                               <td>{{ $teache->user->email }}</td>
+                               <td>{{ $teache->course->name }}</td>
+                               <td>{{ $teache->phone_no }}</td>
                                <td>
 
                                 <a href="#" class="btn btn-success">
@@ -57,7 +65,9 @@
                                  <i class="icofont-delete"></i>Delete
                                 </a>
                                 </td>
-                             </tr>
+                              </tr>
+                                @endforeach
+                            
                           </tbody>
                       </table>
                     </div>

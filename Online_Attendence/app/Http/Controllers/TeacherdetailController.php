@@ -6,5 +6,5 @@ use Illuminate\Http\Request;
 
 class TeacherdetailController extends Controller
 {
-    return view('frontend.teacherdetail')
+    return view('frontend.teacherdetail');
 }

@@ -17,6 +17,8 @@ class AttendanceController extends Controller
     public function index()
     {   
         $students = Student::all();
+
+        
         
         return view('attendance.index',compact('students'));
     }
