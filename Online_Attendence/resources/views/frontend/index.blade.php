@@ -31,7 +31,11 @@
 				<li>
 					<div class="ch-item">				
 						<div class="ch-info">
-							<div class="ch-info-front ch-img-1"><img src="{{asset($teacher->profile)}}" alt="" style="border-radius:60%;"></div>
+
+							<div class="ch-info-front ch-img-1"><img src="{{asset($teacher->profile)}}"></div>
+
+							<div class="ch-info-front ch-img-1"><img src="{{asset($teacher->profile)}}" alt=""></div>
+
 							<div class="ch-info-back">
 								<h4>{{$teacher->user->name}}</h4>
 								<p>by {{$teacher->user->name}} <a href="{{route('teacherdetail',$teacher->id)}}">View Profile</a></p>
