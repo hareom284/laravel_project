@@ -27,16 +27,22 @@
                 <li class="list-group-item d-flex justify-content-between align-items-center col-md-12 ">
                  <h4> Number Of Section :</h4>
                   <span class="badge badge-primary badge-pill"><h6>14</h6></span>
+                  @if(isset(Auth::user()->email))
                   <h4> Course Name :</h4>
+                  <span class="badge badge-primary badge-pill"><h6>{{$teachers->id}}</h6></span>
+                  @else
+                  <script> window.location ="/"</script>
+                  @endif
+                  {{-- {{Auth::user()->id->name}} --}}
                   
-                    <select name="subject" class="badge badge-primary badge-pill" style="outline: none">
+                    {{-- <select name="subject" class="badge badge-primary badge-pill" style="outline: none">
                       @foreach ($courses as $course)
                           
+                      @auth()
+                      <option value=""></option>
                       
-                      <option value="{{ $course->course_id }}">{{$course->name}}</option>
-
                       @endforeach
-                    </select>
+                    </select> --}}
 
                   
                

@@ -7,6 +7,7 @@ use App\Student;
 use App\User;
 use App\Course;
 use App\Attendacne;
+use App\Teacher;
 
 
 class CheckattendanceController extends Controller
@@ -17,10 +18,11 @@ class CheckattendanceController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {   
+        $teachers = Teacher::all();
         $students = Student::all();
         $courses = Course::all();
-        return view('checkattendance.index',compact('students','courses'));
+        return view('checkattendance.index',compact('students','courses','teachers'));
     }
 
     /**
