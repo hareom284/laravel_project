@@ -53,7 +53,7 @@ class LoginController extends Controller
           break;
 
             case 'student':
-            return 'student';
+            return 'studentdetail';
             break;
 
           default :
