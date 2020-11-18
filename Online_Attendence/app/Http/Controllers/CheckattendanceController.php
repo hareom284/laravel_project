@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Student;
 use App\User;
+use App\Course;
 use App\Attendacne;
 
 
@@ -18,7 +19,8 @@ class CheckattendanceController extends Controller
     public function index()
     {
         $students = Student::all();
-        return view('checkattendance.index',compact('students'));
+        $courses = Course::all();
+        return view('checkattendance.index',compact('students','courses'));
     }
 
     /**

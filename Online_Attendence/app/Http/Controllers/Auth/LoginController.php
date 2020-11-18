@@ -45,12 +45,16 @@ class LoginController extends Controller
       switch($roles[0])
       {
           case 'admin':
-          return 'admin';
+          return 'admine';
           break;
 
           case 'teacher':
-          return 'teacher';
+          return 'attendance';
           break;
+
+            case 'student':
+            return 'student';
+            break;
 
           default :
           return 'home';

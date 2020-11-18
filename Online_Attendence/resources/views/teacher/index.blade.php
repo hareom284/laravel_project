@@ -65,8 +65,9 @@
                                  <i class="icofont-delete"></i>Delete
                                 </a>
                                 </td>
+                              </tr>
                                 @endforeach
-                             </tr>
+                            
                           </tbody>
                       </table>
                     </div>
