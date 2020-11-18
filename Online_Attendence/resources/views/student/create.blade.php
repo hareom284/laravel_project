@@ -9,10 +9,10 @@
                 <div class="signup-content">
                     
                     	<h2 class="form-title">Create account</h2>
-					<form action="{{ route('student.store') }}" method="POST" enctype="multipart/form-data">
-						@csrf
+                    <form action="{{ route('student.store') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
 						<div class="form-group row">
-						    <label for="photo" class="col-sm-2 col-form-label">Photo</label>
+						    <label for="phone" class="col-sm-2 col-form-label">Phone</label>
 						    <div class="col-sm-10">
 						      <input type="file" class="form-control @error('photo') is-invalid @enderror" id="phone" name="photo" >
 						      @error('photo')
@@ -44,7 +44,12 @@
 						      @enderror
 						    </div>
 						  </div>
-						 
+						  <div class="form-group row">
+						    <label for="roll_no" class="col-sm-2 col-form-label">Roll no</label>
+						    <div class="col-sm-10">
+						      <input type="number" class="form-control" id="password" name="roll_no" placeholder="Enter Your Roll no">
+						    </div>
+						  </div>
 						  <fieldset class="form-group">
 						    <div class="row">
 						      <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
@@ -76,17 +81,22 @@
 						  <div class="form-group row">
 						    <label for="address" class="col-sm-2 col-form-label">Address</label>
 						    <div class="col-sm-10">
-						      <input type="text" class="form-control @error('address') is-invalid @enderror" id="address" placeholder="Address" name="address">
+                              <input type="text" class="form-control @error('address') is-invalid @enderror" id="address" placeholder="Address" name="address">
+                              @error('address')
+                              <div class="alert alert-danger">{{$message}}</div>
+                              @enderror
 						    </div>
 						  </div>
 						  <div class="form-group row">
 						    <label class="col-sm-2 col-form-label">Course</label>
 						    <div class="col-sm-10">
 						      <select class="custom-select" name="course_name">
-								  <option selected>Choose Course</option>
-								  <option value="1">One</option>
-								  <option value="2">Two</option>
-								  <option value="3">Three</option>
+                                  <option selected>Choose Course</option>
+                                  @foreach ($course as $item)
+                                  <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                  @endforeach
+								  
+								  
 							  </select>
 						    </div>
 						  </div>
@@ -106,10 +116,4 @@
 
  
 @endsection
-@section('script')
 
- 
-  
-
-
-@endsection
