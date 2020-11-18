@@ -10,7 +10,11 @@
 <body>
   <div class="bg-img">
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a href="" class="navbar-brand mx-5">Student Attendance</a>
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="{{ asset('my_asset/images/logo1.png') }}" width="70px" height="40px" alt="" loading="lazy" style="background: transparent;">
+        </a>
+      </nav>
       <button class="navbar-toggler" data-target="#Nav" data-toggle="collapse">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -21,7 +25,7 @@
 
           <li class="nav-item"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
 
-          <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+          
           <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Sign</a></li>
           <li class="nav-item"><a href="{{ route('student.create') }}" class="nav-link">Sign Up</a></li>
 
@@ -31,6 +35,7 @@
     </nav>
   </div>
   @yield('content') 
+ 
   @yield('script')
 
 <script src="{{asset('my_asset/bootstrap/js/jquery.min.js')}}"></script>
