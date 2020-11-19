@@ -47,6 +47,6 @@
 			</ul>
 		
 		</div>
-	</div><!--/team-->
+	</div>
 </div>
 @endsection
