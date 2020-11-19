@@ -1,18 +1,6 @@
 @extends('frontendtemplate')
 @section('content')
-<<<<<<< HEAD
-<div class="container">
-	<div class="card detail">
-		<div class="container-fliud">
-			<div class="wrapper row">
-				<div class="preview col-md-6">
-					<div class="preview-pic tab-content">
-					  <div class="tab-pane active" id="pic-1"><img src="{{asset($teachers->profile)}}" /></div>
-					 <!--  <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
-					  <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252" /></div>
-					  <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
-					  <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252" /></div> -->
-=======
+
 	<div class="container">
 		<div class="card detail">
 			<div class="container-fliud">
@@ -22,17 +10,8 @@
 						<div class="preview-pic tab-content">
 						
 						  <div class="tab-pane active" id="pic-1"><img src="{{asset($teachers->profile)}}" /></div>
-						 <!--  <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252" /></div> -->
 						</div>
-												
->>>>>>> 8710c9e5e14a9f50aa5401af01055a6f673d393c
-					</div>
-											
-				</div>
-				<div class="details col-md-6">
+						<div class="details col-md-6">
 					<h3 class="product-title">teacher detail</h3>
 					<div class="rating">
 						<div class="stars">
@@ -51,23 +30,13 @@
 					<h5 class="price">Degree: <span>{{$teachers->degree}}</span></h5>
 					<h5 class="price">Gender: <span>{{$teachers->gender}}</span></h5>
 
-					<!-- <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
-					<h5 class="sizes">sizes:
-						<span class="size" data-toggle="tooltip" title="small">s</span>
-						<span class="size" data-toggle="tooltip" title="medium">m</span>
-						<span class="size" data-toggle="tooltip" title="large">l</span>
-						<span class="size" data-toggle="tooltip" title="xtra large">xl</span>
-					</h5>
-					<h5 class="colors">colors:
-						<span class="color orange not-available" data-toggle="tooltip" title="Not In store"></span>
-						<span class="color green"></span>
-						<span class="color blue"></span>
-					</h5>
-					<div class="action">
-						<button class="add-to-cart btn btn-default" type="button">add to cart</button>
-						<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
-					</div> -->
+					
+				</div>					
+
+					</div>
+											
 				</div>
+				
 			</div>
 		</div>
 	</div>
