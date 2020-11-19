@@ -1,35 +1,64 @@
 @extends('frontendtemplate')
 @section('content')
-	<div class="container">
-		<div class="card detail">
-			<div class="container-fliud">
-				<div class="wrapper row">
-					<div class="preview col-md-6">
-						
-						<div class="preview-pic tab-content">
-						  <div class="tab-pane active" id="pic-1"><img src="{{asset('my_asset/images/t1.jpg')}}" /></div>
-						</div>
-												
-					</div>
-					<div class="details col-md-6">
-						<h3 class="product-title">student info</h3>
-						<div class="rating">
-							<div class="stars">
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star checked"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-							</div>
-						</div>
-						<p class="product-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam nisi possimus quod sunt unde vitae minus illum perspiciatis ratione incidunt atque voluptatum, animi! Iusto, deleniti voluptatum quos eius minus veniam?</p>
-						<h4 class="price">Name: <span>Mrs.Kyaw Zin</span></h4>
-						<h5 class="price">Phone: <span>09787788471</span></h5>
-						<h5 class="price">Degree: <span>BE.IT</span></h5>
-						<h5 class="price">Gender: <span>Male</span></h5>
-					</div>
-				</div>
+	
+		<!-- Student Profile -->
+<div class="container-fluid">
+<div class="student-profile py-4">
+	
+	  <div class="row">
+		<div class="col-lg-4">
+		  <div class="card shadow-sm">
+			<div class="card-header bg-transparent text-center">
+			  <img class="profile_img" src="https://placeimg.com/640/480/arch/any" alt="">
+			  <h3>Zaw Zaw Win</h3>
 			</div>
+			<div class="card-body">
+				<p class="mb-0"><strong class="pr-1">Percentage:</strong>80%</p>
+			  <p class="mb-0"><strong class="pr-1">Class:</strong>4</p>
+			  <p class="mb-0"><strong class="pr-1">Section:</strong>A</p>
+			</div>
+		  </div>
 		</div>
+		<div class="col-lg-8">
+		  <div class="card shadow-sm">
+			<div class="card-header bg-transparent border-0">
+			  <h3 class="mb-0"><i class="far fa-clone pr-1"></i>General Information</h3>
+			</div>
+			<div class="card-body pt-0">
+			  <table class="table table-bordered">
+				<tr>
+				  <th width="30%">Roll</th>
+				  <td width="2%">:</td>
+				  <td>125</td>
+				</tr>
+				<tr>
+				  <th width="30%">Academic Year	</th>
+				  <td width="2%">:</td>
+				  <td>2020</td>
+				</tr>
+				<tr>
+				  <th width="30%">Gender</th>
+				  <td width="2%">:</td>
+				  <td>Male</td>
+				</tr>
+				<tr>
+				  <th width="30%">Phone no</th>
+				  <td width="2%">:</td>
+				  <td>1232423</td>
+				</tr>
+				<tr>
+				  <th width="30%">Address</th>
+				  <td width="2%">:</td>
+				  <td>Loikaw</td>
+				</tr>
+			  </table>
+			</div>
+		  </div>
+		</div>
+	  </div>
 	</div>
+  </div>
+
+  
+	
 @endsection
