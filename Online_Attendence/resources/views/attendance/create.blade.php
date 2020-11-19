@@ -24,23 +24,14 @@
             <ul class="list-group my-3 ">
                 <li class="list-group-item d-flex justify-content-between align-items-center col-md-12 ">
                  <h4> Number Of Section :</h4>
-                  <span class="badge badge-primary badge-pill"><h6>14</h6></span>
+                  <span class="badge badge-primary badge-pill"><h6>{{ Auth::user()->teacher->course->no_of_times }}</h6></span>
                   @if(isset(Auth::user()->email))
                   <h4> Course Name :</h4>
-                  <span class="badge badge-primary badge-pill"><h6>name</h6></span>
+                  <span class="badge badge-primary badge-pill"><h6>{{Auth::user()->teacher->course->name}}</h6></span>
                   @else
                   <script> window.location ="/"</script>
                   @endif
-                  {{-- {{Auth::user()->id->name}} --}}
                   
-                    {{-- <select name="subject" class="badge badge-primary badge-pill" style="outline: none">
-                      @foreach ($courses as $course)
-                          
-                      @auth()
-                      <option value=""></option>
-                      
-                      @endforeach
-                    </select> --}}
 
                   
                
@@ -52,7 +43,7 @@
                 <tr>
                   <th>Student Name</th>
                   <th>Roll Number</th>
-                  <th>Course</th>
+                  <th>Email</th>
                   <th>
                     
                     Attendance
@@ -67,7 +58,7 @@
                 <tr>
                   <td>{{$student->roll_no}}</td>
                   <td>{{$student->user->name}}</td>
-                  <td>{{$student->course->name}}</td>
+                  <td>{{$student->user->email}}</td>
                   <td>
                     <input type="radio" name="{{ $student->id}}" id="defaultCheck1" class="myCheck oneBy" value="1" checked>Present
                     <input type="radio"  id="defaultCheck1" class="unCheck twoBy" name="{{ $student->id}}" value="0">Absent</td>
