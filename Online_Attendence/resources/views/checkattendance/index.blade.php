@@ -47,7 +47,8 @@
                   
                
             </ul>
-            
+            <form action="{{ route('attendance.store')}}" method="POST">
+              @csrf
             <table class="table mt-3 table-bordered dataTable">
               <thead>
                 <tr>
@@ -55,7 +56,7 @@
                   <th>Roll Number</th>
                   <th>Course</th>
                   <th>
-                    <button type="button" class="check btn btn-success">Select All</button>
+                    
                     Attendance
                     
                   </th>
@@ -70,7 +71,7 @@
                   <td>{{$student->user->name}}</td>
                   <td>{{$student->course->name}}</td>
                   <td>
-                    <input type="radio" value="" id="defaultCheck1" class="myCheck oneBy" name="{{ $student->id }}">Present
+                    <input type="radio" name="{{ $student->id }}" id="defaultCheck1" class="myCheck oneBy" name="{{ $student->id }}" checked>Present
                     <input type="radio" value="" id="defaultCheck1" class="unCheck twoBy" name="{{ $student->id }}">Absent</td>
                   </td>
 
@@ -79,8 +80,9 @@
                 
               </tbody>
             </table>
-            <button class="btn btn-success col-md-4 offset-md-4">Complete All</button>
-          
+           
+            <bottom class="btn btn-success col-md-4 offset-md-4" type="submit">Complete All</bottom>
+            </form>             
             
           </div>
         </div>
@@ -97,52 +99,4 @@
     <script type="text/javascript">
       $('.dataTable').DataTable();
   </script>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script>
-  $(document).ready(function(){
-      $(".check").click(function(){
-          $(".myCheck").prop("checked", true);
-      });
-      $(".uncheck").click(function(){
-          $(".unCheck").prop("checked", true);
-      });
-  });
-  </script>
-  <script type="text/javascript">
-    $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-              }
-        }); 
-    $(document).ready(function(){
-      
-      var pcount=0;
-     $(".oneBy,.twoBy").click(function(){
-  
-         pcount++;
-          var studentid =$(this).data('studentid');
-          var courseid =$(this).data('courseid');
-          var tvalue = $(this).data('tvalue');
-
-          $.post("{{route('attendance.store')}}",{studentid:studentid,courseid:courseid,tvalue:tvalue},function(response){
-            console.log(response);
-          })
-        
-        var rowNumber = $("#myTable tr").length;
-        // console.log(rowNumber);
-        if (pcount == (rowNumber-1)) {
-            $('.com_all').prop('disabled',false);
-        }
-
-       
-         
-     })
-
-     
-
-    })
-    
-  </script>
- 
-
 @endsection
