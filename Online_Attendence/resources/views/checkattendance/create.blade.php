@@ -27,7 +27,7 @@
                   <span class="badge badge-primary badge-pill"><h6>14</h6></span>
                   @if(isset(Auth::user()->email))
                   <h4> Course Name :</h4>
-                  <span class="badge badge-primary badge-pill"><h6>name</h6></span>
+                  <span class="badge badge-primary badge-pill"><h6>{{ Auth::user()->teacher()->course()->name }}</h6></span>
                   @else
                   <script> window.location ="/"</script>
                   @endif

@@ -69,8 +69,8 @@
                   <td>{{$student->user->name}}</td>
                   <td>{{$student->course->name}}</td>
                   <td>
-                    <input type="radio" name="{{ $student->id }}" id="defaultCheck1" class="myCheck oneBy" value="$student->id" checked>Present
-                    <input type="radio" value="" id="defaultCheck1" class="unCheck twoBy" name="{{ $student->id }}">Absent</td>
+                    <input type="radio" name="{{ $student->id}}" id="defaultCheck1" class="myCheck oneBy" value="1" checked>Present
+                    <input type="radio"  id="defaultCheck1" class="unCheck twoBy" name="{{ $student->id}}" value="0">Absent</td>
                   </td>
 
                 </tr>

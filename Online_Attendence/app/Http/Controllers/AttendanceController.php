@@ -64,7 +64,35 @@ class AttendanceController extends Controller
      */
     public function store(Request $request)
     {
-         dd($request);
+      $arr=$request->all();//arr
+      
+       foreach($arr as $k=>$val){
+        //    echo "$k<br/>";
+            // foreach($val as $k=>$v){
+                 $a=null;
+                if(is_numeric($k)){
+                    // echo $k;
+                    $a=Attendance::where('student_id',$k)->firstorFail();
+                    dd($a);
+                    
+                    if($val ==1){
+                        $a->count+=1;
+                    }else{
+                        $a->count+=0;
+                    }
+                    
+                    $a->save();
+                    
+                   }else{
+                    continue;
+                   }
+                // 
+           //. }
+          
+       }
+       die();
+       echo "successfully";
+        
         
     }
 
