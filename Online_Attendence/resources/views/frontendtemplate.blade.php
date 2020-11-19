@@ -236,9 +236,13 @@ h1, h2, h3, h4, h5, h6 {
 
           <li class="nav-item"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
 
-         
-          <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Sign</a></li>
+         @auth
+          <li class="nav-item"><a href="{{ route('signout') }}" class="nav-link">Signout</a></li>
+          @else
+           <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Sign</a></li>
           <li class="nav-item"><a href="{{ route('student.create') }}" class="nav-link">Sign Up</a></li>
+          
+        @endauth
 
 
         </ul>

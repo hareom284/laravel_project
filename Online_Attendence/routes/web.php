@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('frontend/index');
 // });
+
 Route::get('/','FrontendController@home')->name('mainpage');
 
 
@@ -34,6 +35,7 @@ Route::get('signup','FrontendController@signup')->name('signuppage');
 
 Route::resource('attendance','AttendanceController');
 Route::resource('checkattendance','CheckattendanceController');
+Route::get('logout','LoginController@logout')->name('signout');
 
 // =====================================================================
 
