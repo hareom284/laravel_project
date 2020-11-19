@@ -25,7 +25,7 @@ class CreateTeachersTable extends Migration
                     ->references('id')
                     ->on('courses')
                     ->onDelete('cascade');
-            $table->integer('phone_no');
+            $table->text('phone_no');
             $table->text('profile');
             $table->text('degree');
             $table->text('gender');
