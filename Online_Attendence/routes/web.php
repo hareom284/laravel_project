@@ -32,12 +32,17 @@ Route::get('signup','FrontendController@signup')->name('signuppage');
 
 
 // ========= By KZW ==========
+Route::middleware('role:teacher')->group(function()
+{
+    Route::resource('attendance','AttendanceController');
+    Route::resource('checkattendance','CheckattendanceController');
+});
 
-Route::resource('attendance','AttendanceController');
-Route::resource('checkattendance','CheckattendanceController');
-Route::get('logout','LoginController@logout')->name('signout');
+
 
 // =====================================================================
+
+Route::middleware('role:admin')->group(function(){
 
 
 
@@ -47,6 +52,8 @@ Route::resource('teacher', 'TeacherController');
 
 Route::resource('course', 'CourseController');
 
+
+});
 Route::resource('student', 'StudentController');
 Auth::routes();
 

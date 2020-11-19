@@ -26,10 +26,10 @@
             <ul class="list-group my-3 ">
                 <li class="list-group-item d-flex justify-content-between align-items-center col-md-12 ">
                  <h4> Number Of Section :</h4>
-                  <span class="badge badge-primary badge-pill"><h6>14</h6></span>
+                  <span class="badge badge-primary badge-pill"><h6>{{ Auth::user()->teacher->course->no_of_times }}</h6></span>
                   @if(isset(Auth::user()->email))
                   <h4> Course Name :</h4>
-                  <span class="badge badge-primary badge-pill"><h6>{{Auth::user()->teachers[0]->course->name}}</h6></span>
+                  <span class="badge badge-primary badge-pill"><h6>{{Auth::user()->teacher->course->name}}</h6></span>
                   @else
                   <script> window.location ="/"</script>
                   @endif
@@ -42,21 +42,28 @@
             
             <th>Roll Number</th>
             <th>Student Name</th>
-            <th>Course</th>
+            <th>Email</th>
             <th>Attendance Status</th>
             <th>Report</th>
           </tr>
         </thead>
         <tbody>
-           
+          
           @foreach($students as $student)
-         
+         @php
+             $count = $student->attendance->count;
+             $no = Auth::user()->teacher->course->no_of_times ;
+             $percentage = ceil(($count/$no)*100);
+             
+         @endphp
+          
          
           <tr>
+            
             <td>{{$student->roll_no}}</td>
             <td>{{$student->user->name}}</td>
-            <td>{{$student->course->name}}</td>
-            <td></td>
+            <td>{{$student->user->email}}</td>
+            <td>{{ $percentage }} %</td>
             <td>
             <a href="#" class="btn btn-info">Detail</a>
             

@@ -29,10 +29,10 @@ class AttendanceController extends Controller
         
         
         $teachers = Teacher::all();
-        // dd(Auth::user()->id);
+        // Auth::user()->id
         // $teachers = $teachers->find(Auth::user()->id);
         
-        $students = Student::all();
+        $students = Student::where('course_id',Auth::user()->teacher->course_id)->get();
         $courses = Course::all();
         
         
@@ -49,11 +49,13 @@ class AttendanceController extends Controller
     {
         $courses = Course::all();
         // dd('helo');
-        $students = Student::all();
+        $students = Student::where('course_id',Auth::user()->teacher->course_id)->get();
 
         $teachers = Teacher::all();
 
-        return view('attendance.create',compact('courses','teachers','students'));
+        $attendance = Attendance::all();
+
+        return view('attendance.create',compact('courses','teachers','students',"attendance"));
     }
 
     /**
@@ -65,7 +67,7 @@ class AttendanceController extends Controller
     public function store(Request $request)
     {
       $arr=$request->all();//arr
-      
+      $k = 0;
        foreach($arr as $k=>$val){
         //    echo "$k<br/>";
             // foreach($val as $k=>$v){
@@ -73,7 +75,7 @@ class AttendanceController extends Controller
                 if(is_numeric($k)){
                     // echo $k;
                     $a=Attendance::where('student_id',$k)->firstorFail();
-                    dd($a);
+                    
                     
                     if($val ==1){
                         $a->count+=1;
@@ -86,10 +88,20 @@ class AttendanceController extends Controller
                    }else{
                     continue;
                    }
-                // 
-           //. }
+                 
+           
           
        }
+       //no of times 
+       $no_of_items =Attendance::where('student_id',$k)->firstorFail();
+       
+       $product = Course::find($no_of_items->course_id);
+       $number = $product->no_of_times;
+       --$number;
+       $product->no_of_times = $number;
+
+       $product->save();
+       return redirect()->route('attendance.index');
        die();
        echo "successfully";
         

@@ -12,6 +12,8 @@ use App\Student;
 
 use App\User;
 
+use App\Attendance;
+
 class StudentController extends Controller
 {
     /**
@@ -24,7 +26,8 @@ class StudentController extends Controller
         $students = Student::all();
         $user = User::all();
         $course = Course::all();
-        return view('student.index',compact('students','user','course'));
+        $attendance = Attendance::all();
+        return view('student.index',compact('students','user','course','attendance'));
     }
 
     /**
@@ -100,6 +103,14 @@ class StudentController extends Controller
 
 
         $student->save();
+
+        $attendance =new Attendance;
+
+        $attendance->count = 0;
+        $attendance->course_id = $request->course_name;
+        $attendance->student_id = $student->id;
+
+        $attendance->save();
 
         return redirect()->route('login');
 
