@@ -42,7 +42,7 @@
             
             <th>Roll Number</th>
             <th>Student Name</th>
-            <th>Email</th>
+            <th></th>
             <th>Attendance Status</th>
             <th>Report</th>
           </tr>

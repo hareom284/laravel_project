@@ -92,8 +92,7 @@ class AttendanceController extends Controller
            
           
        }
-       $courses = Auth::user()->teacher()->course()->no_of_times;
-       $courses->save();
+       
        return redirect()->route('attendance.index');
        die();
        echo "successfully";
