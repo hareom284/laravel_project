@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Auth;
 use App\Student;
 use App\User;
 
+use App\Course;
+
+use App\Teacher;
+
 
 
 class AttendanceController extends Controller
@@ -21,8 +25,15 @@ class AttendanceController extends Controller
      */
     public function index()
     {   
-        $students = Student::all();
         
+        
+        
+        $teachers = Teacher::all();
+        // dd(Auth::user()->id);
+        // $teachers = $teachers->find(Auth::user()->id);
+        
+        $students = Student::all();
+        $courses = Course::all();
         
         
         
@@ -36,7 +47,13 @@ class AttendanceController extends Controller
      */
     public function create()
     {
-        
+        $courses = Course::all();
+        // dd('helo');
+        $students = Student::all();
+
+        $teachers = Teacher::all();
+
+        return view('attendance.create',compact('courses','teachers','students'));
     }
 
     /**

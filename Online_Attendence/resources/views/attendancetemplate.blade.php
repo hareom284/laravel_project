@@ -127,7 +127,7 @@
             </a>
         </li>
          <li>
-            <a class="app-menu__item" href="{{route('checkattendance.index')}}">
+            <a class="app-menu__item" href="{{route('attendance.create')}}">
              <i class="far fa-calendar-check " size="larger"></i>&nbsp;
             
               <span class="app-menu__label">

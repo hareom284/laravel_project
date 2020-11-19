@@ -2,8 +2,6 @@
 
 {{-- For Attendance Check --}}
 
-
-
 @extends('attendancetemplate')
 
 @section('content')
@@ -29,7 +27,7 @@
                   <span class="badge badge-primary badge-pill"><h6>14</h6></span>
                   @if(isset(Auth::user()->email))
                   <h4> Course Name :</h4>
-                  <span class="badge badge-primary badge-pill"><h6>d</h6></span>
+                  <span class="badge badge-primary badge-pill"><h6>name</h6></span>
                   @else
                   <script> window.location ="/"</script>
                   @endif
@@ -47,7 +45,7 @@
                   
                
             </ul>
-            <form action="{{ route('attendance.store')}}" method="POST">
+            <form action="{{route('attendance.store')}}" method="POST">
               @csrf
             <table class="table mt-3 table-bordered dataTable">
               <thead>
@@ -63,7 +61,7 @@
                 </tr>
               </thead>
               <tbody>
-           
+              
                   @foreach($students as $student)
          
                 <tr>
@@ -71,7 +69,7 @@
                   <td>{{$student->user->name}}</td>
                   <td>{{$student->course->name}}</td>
                   <td>
-                    <input type="radio" name="{{ $student->id }}" id="defaultCheck1" class="myCheck oneBy" name="{{ $student->id }}" checked>Present
+                    <input type="radio" name="{{ $student->id }}" id="defaultCheck1" class="myCheck oneBy" value="$student->id" checked>Present
                     <input type="radio" value="" id="defaultCheck1" class="unCheck twoBy" name="{{ $student->id }}">Absent</td>
                   </td>
 
@@ -80,9 +78,10 @@
                 
               </tbody>
             </table>
-           
-            <bottom class="btn btn-success col-md-4 offset-md-4" type="submit">Complete All</bottom>
-            </form>             
+            
+            <input class="btn btn-success col-md-4 offset-md-4" type="submit" value="Submit">
+            </form>     
+                
             
           </div>
         </div>
