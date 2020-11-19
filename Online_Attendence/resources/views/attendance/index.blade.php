@@ -42,21 +42,28 @@
             
             <th>Roll Number</th>
             <th>Student Name</th>
-            <th></th>
+            <th>Email</th>
             <th>Attendance Status</th>
             <th>Report</th>
           </tr>
         </thead>
         <tbody>
-           
+          
           @foreach($students as $student)
-         
+         @php
+             $count = $student->attendance->count;
+             $no = Auth::user()->teacher->course->no_of_times ;
+             $percentage = ceil(($count/$no)*100);
+             
+         @endphp
+          
          
           <tr>
+            
             <td>{{$student->roll_no}}</td>
             <td>{{$student->user->name}}</td>
             <td>{{$student->user->email}}</td>
-            <td>10%</td>
+            <td>{{ $percentage }} %</td>
             <td>
             <a href="#" class="btn btn-info">Detail</a>
             

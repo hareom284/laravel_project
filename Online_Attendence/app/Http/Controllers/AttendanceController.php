@@ -67,7 +67,7 @@ class AttendanceController extends Controller
     public function store(Request $request)
     {
       $arr=$request->all();//arr
-      
+      $k = 0;
        foreach($arr as $k=>$val){
         //    echo "$k<br/>";
             // foreach($val as $k=>$v){
@@ -92,7 +92,15 @@ class AttendanceController extends Controller
            
           
        }
+       //no of times 
+       $no_of_items =Attendance::where('student_id',$k)->firstorFail();
        
+       $product = Course::find($no_of_items->course_id);
+       $number = $product->no_of_times;
+       --$number;
+       $product->no_of_times = $number;
+
+       $product->save();
        return redirect()->route('attendance.index');
        die();
        echo "successfully";

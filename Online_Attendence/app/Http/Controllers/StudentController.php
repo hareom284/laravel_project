@@ -26,7 +26,8 @@ class StudentController extends Controller
         $students = Student::all();
         $user = User::all();
         $course = Course::all();
-        return view('student.index',compact('students','user','course'));
+        $attendance = Attendance::all();
+        return view('student.index',compact('students','user','course','attendance'));
     }
 
     /**
