@@ -26,7 +26,7 @@ Route::get('contact','FrontendController@contact')->name('contact');
 Route::get('signin','FrontendController@signin')->name('signinpage');
 Route::get('signup','FrontendController@signup')->name('signuppage');
 
-
+Route::get('signout','LoginController@signout')->name('signout');
 
 
 
