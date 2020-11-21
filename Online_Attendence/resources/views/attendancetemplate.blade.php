@@ -82,42 +82,37 @@
       </div>
       <ul class="app-menu">
                 
-        <li>
-            <a class="app-menu__item" href="#">
-                <i class="app-menu__icon icofont-dashboard"></i>
+        <ul class="app-menu">
+
+          <li>
+              <a class="app-menu__item" href="{{route('attendance.index')}}">
+              <i class="fas fa-eye" size="larger"></i>&nbsp;
                 <span class="app-menu__label">
-                    Dashboard
-                </span>
-            </a>
-        </li>
-
-        <li>
-            <a class="app-menu__item" href="{{ route('teacher.index') }}">
-              <i class="icofont-teacher"></i>
-            
-              <span class="app-menu__label">
-                    Teacher
-                </span>
-            </a>
-        </li>
-
-        
-        <li>
-          <a class="app-menu__item" href="{{ route('course.index') }}">
-            <i class="icofont-book-alt"></i>
-              <span class="app-menu__label">
-                  Course
-              </span>
-          </a>
-      </li>
-      <li>
-        <a class="app-menu__item" href="{{ route('student.index') }}">
-            <i class="app-menu__icon icofont-users-social"></i>
-            <span class="app-menu__label">
-                Student
-            </span>
-        </a>
-    </li>
+                      View Attendance
+              <a class="app-menu__item" href="#">
+                  <i class="app-menu__icon icofont-dashboard"></i>
+                  <span class="app-menu__label">
+                      Dashboard
+                  </span>
+  
+              </a>
+          </li>
+           <li>
+              <a class="app-menu__item" href="{{route('attendance.create')}}">
+               <i class="far fa-calendar-check " size="larger"></i>&nbsp;
+  
+          <li>
+              <a class="app-menu__item" href="{{ route('teacher.index') }}">
+                <i class="icofont-teacher"></i>
+  
+                <span class="app-menu__label">
+                      Check Attendance
+                      Teacher
+                  </span>
+  
+  
+              </a>
+          </li>
 
        
     
