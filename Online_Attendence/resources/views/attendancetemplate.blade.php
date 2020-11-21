@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta name="description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Twitter meta-->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:site" content="@pratikborsadiya">
@@ -13,13 +14,25 @@
     <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
     <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
     <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-    <title>Student Attendance System</title>
+    <title>Teacher</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- fav icon font  --}}
     <!-- Favicon-->
-    
+    <link rel="apple-touch-icon" sizes="57x57" href="{{asset('backend/favicon/apple-icon-57x57.png')}}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{asset('backend/favicon/apple-icon-60x60.png')}}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{asset('backend/favicon/apple-icon-72x72.png')}}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('backend/favicon/apple-icon-76x76.png')}}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{asset('backend/favicon/apple-icon-114x114.png')}}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{asset('backend/favicon/apple-icon-120x120.png')}}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{asset('backend/favicon/apple-icon-144x144.png')}}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{asset('backend/favicon/apple-icon-152x152.png')}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('backend/favicon/apple-icon-180x180.png')}}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{asset('backend/favicon/android-icon-192x192.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('backend/favicon/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{asset('backend/favicon/favicon-96x96.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('backend/favicon/favicon-16x16.png')}}">
     {{-- end favicon font  --}}
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('backend/css/main.css')}}">
@@ -31,7 +44,7 @@
     <link rel="stylesheet" type="text/css" href="{{('backend/icon/icofont/icofont.min.css')}}">
         <!-- Boxicon CSS -->')}}
     <link rel="stylesheet" type="text/css" href="{{('backend/icon/boxicons-master/css/boxicons.min.css')}}">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/aa57437611.js" crossorigin="anonymous"></script>
   </head>
   <body class="app sidebar-mini">
     <!-- Navbar-->
@@ -48,6 +61,7 @@
           <ul class="app-notification dropdown-menu dropdown-menu-right">
             <li class="app-notification__title">You have 0 new notifications.</li>
             
+            </div>
             <li class="app-notification__footer"><a href="#">See all notifications.</a></li>
           </ul>
         </li>
@@ -74,45 +88,38 @@
     <!-- Sidebar menu-->
     <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
     <aside class="app-sidebar">
-      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
+      
+        
+    
+      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="{{ asset(Auth::user()->teacher->profile) }}" alt="User Image" width="70px" height="40px" style="border-radius:49%;">
         <div>
-          <p class="app-sidebar__user-name">John Doe</p>
-          <p class="app-sidebar__user-designation">Frontend Developer</p>
+          <p class="app-sidebar__user-name"> {{ Auth::user()->name }}</p>
+          <p class="app-sidebar__user-designation">Teacher</p>
         </div>
       </div>
       <ul class="app-menu">
+        <li>
+            <a class="app-menu__item" href="{{route('attendance.index')}}">
+            <i class="fas fa-eye" size="larger"></i>&nbsp;
+              <span class="app-menu__label">
+                    View Attendance
+                </span>
+               
+            </a>
+        </li>
+         <li>
+            <a class="app-menu__item" href="{{route('attendance.create')}}">
+             <i class="far fa-calendar-check " size="larger"></i>&nbsp;
+            
+              <span class="app-menu__label">
+                    Check Attendance
+                </span>
                 
-        <ul class="app-menu">
+               
+            </a>
+        </li>
 
-          <li>
-              <a class="app-menu__item" href="{{route('attendance.index')}}">
-              <i class="fas fa-eye" size="larger"></i>&nbsp;
-                <span class="app-menu__label">
-                      View Attendance
-              <a class="app-menu__item" href="#">
-                  <i class="app-menu__icon icofont-dashboard"></i>
-                  <span class="app-menu__label">
-                      Dashboard
-                  </span>
-  
-              </a>
-          </li>
-           <li>
-              <a class="app-menu__item" href="{{route('attendance.create')}}">
-               <i class="far fa-calendar-check " size="larger"></i>&nbsp;
-  
-          <li>
-              <a class="app-menu__item" href="{{ route('teacher.index') }}">
-                <i class="icofont-teacher"></i>
-  
-                <span class="app-menu__label">
-                      Check Attendance
-                      Teacher
-                  </span>
-  
-  
-              </a>
-          </li>
+        
 
        
     
@@ -146,6 +153,7 @@
       }
     </script>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @yield('script')
   </body>
 </html>

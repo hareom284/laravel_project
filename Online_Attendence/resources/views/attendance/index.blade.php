@@ -6,7 +6,7 @@
 
 @extends('attendancetemplate')
 
-@section('contentone')
+@section('content')
 
 <main class="app-content">
   <div class="app-title">
