@@ -32,9 +32,9 @@
 					<div class="ch-item">				
 						<div class="ch-info">
 
-							<div class="ch-info-front ch-img-1"><img src="{{asset($teacher->profile)}}"></div>
+							<div class="ch-info-front ch-img-1"><img src="{{asset($teacher->profile)}}" style="width:200px;height:170px;border-radius:50%;"></div>
 
-							<div class="ch-info-front ch-img-1"><img src="{{asset($teacher->profile)}}" alt=""></div>
+							<div class="ch-info-front ch-img-1"><img src="{{asset($teacher->profile)}}" alt="" style="width:200px;height:170px;border-radius:50%;"></div>
 
 							<div class="ch-info-back">
 								<h4>{{$teacher->user->name}}</h4>
