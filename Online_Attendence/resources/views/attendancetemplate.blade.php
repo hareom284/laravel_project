@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta name="description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Twitter meta-->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:site" content="@pratikborsadiya">
@@ -14,25 +13,13 @@
     <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
     <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
     <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-    <title>Teacher</title>
+    <title>Student Attendance System</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- fav icon font  --}}
     <!-- Favicon-->
-    <link rel="apple-touch-icon" sizes="57x57" href="{{asset('backend/favicon/apple-icon-57x57.png')}}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{asset('backend/favicon/apple-icon-60x60.png')}}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{asset('backend/favicon/apple-icon-72x72.png')}}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('backend/favicon/apple-icon-76x76.png')}}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{asset('backend/favicon/apple-icon-114x114.png')}}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{asset('backend/favicon/apple-icon-120x120.png')}}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{asset('backend/favicon/apple-icon-144x144.png')}}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{asset('backend/favicon/apple-icon-152x152.png')}}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('backend/favicon/apple-icon-180x180.png')}}">
-    <link rel="icon" type="image/png" sizes="192x192"  href="{{asset('backend/favicon/android-icon-192x192.png')}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('backend/favicon/favicon-32x32.png')}}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{asset('backend/favicon/favicon-96x96.png')}}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('backend/favicon/favicon-16x16.png')}}">
+    
     {{-- end favicon font  --}}
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('backend/css/main.css')}}">
@@ -44,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="{{('backend/icon/icofont/icofont.min.css')}}">
         <!-- Boxicon CSS -->')}}
     <link rel="stylesheet" type="text/css" href="{{('backend/icon/boxicons-master/css/boxicons.min.css')}}">
-    <script src="https://kit.fontawesome.com/aa57437611.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   </head>
   <body class="app sidebar-mini">
     <!-- Navbar-->
@@ -59,52 +46,29 @@
         <!--Notification Menu-->
         <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Show notifications"><i class="fa fa-bell-o fa-lg"></i></a>
           <ul class="app-notification dropdown-menu dropdown-menu-right">
-            <li class="app-notification__title">You have 4 new notifications.</li>
-            <div class="app-notification__content">
-              <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span></span>
-                  <div>
-                    <p class="app-notification__message">Lisa sent you a mail</p>
-                    <p class="app-notification__meta">2 min ago</p>
-                  </div></a></li>
-              <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span></span>
-                  <div>
-                    <p class="app-notification__message">Mail server not working</p>
-                    <p class="app-notification__meta">5 min ago</p>
-                  </div></a></li>
-              <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span></span>
-                  <div>
-                    <p class="app-notification__message">Transaction complete</p>
-                    <p class="app-notification__meta">2 days ago</p>
-                  </div></a></li>
-              <div class="app-notification__content">
-                <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span></span>
-                    <div>
-                      <p class="app-notification__message">Lisa sent you a mail</p>
-                      <p class="app-notification__meta">2 min ago</p>
-                    </div></a></li>
-                <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span></span>
-                    <div>
-                      <p class="app-notification__message">Mail server not working</p>
-                      <p class="app-notification__meta">5 min ago</p>
-                    </div></a></li>
-                <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span></span>
-                    <div>
-                      <p class="app-notification__message">Transaction complete</p>
-                      <p class="app-notification__meta">2 days ago</p>
-                    </div></a></li>
-              </div>
-            </div>
+            <li class="app-notification__title">You have 0 new notifications.</li>
+            
             <li class="app-notification__footer"><a href="#">See all notifications.</a></li>
           </ul>
         </li>
         <!-- User Menu-->
-        <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>
-          <ul class="dropdown-menu settings-menu dropdown-menu-right">
-            <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
-            <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i> Profile</a></li>
-            <li><a class="dropdown-item" href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
-          </ul>
-        </li>
+        <li class="nav-item dropdown">
+          <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+              {{ Auth::user()->name }}
+          </a>
+
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{ route('logout') }}"
+                 onclick="event.preventDefault();
+                               document.getElementById('logout-form').submit();">
+                  {{ __('Logout') }}
+              </a>
+
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                  @csrf
+              </form>
+          </div>
+      </li>
       </ul>
     </header>
     <!-- Sidebar menu-->
@@ -117,28 +81,43 @@
         </div>
       </div>
       <ul class="app-menu">
+                
         <li>
-            <a class="app-menu__item" href="{{route('attendance.index')}}">
-            <i class="fas fa-eye" size="larger"></i>&nbsp;
-              <span class="app-menu__label">
-                    View Attendance
+            <a class="app-menu__item" href="#">
+                <i class="app-menu__icon icofont-dashboard"></i>
+                <span class="app-menu__label">
+                    Dashboard
                 </span>
-               
             </a>
         </li>
-         <li>
-            <a class="app-menu__item" href="{{route('attendance.create')}}">
-             <i class="far fa-calendar-check " size="larger"></i>&nbsp;
+
+        <li>
+            <a class="app-menu__item" href="{{ route('teacher.index') }}">
+              <i class="icofont-teacher"></i>
             
               <span class="app-menu__label">
-                    Check Attendance
+                    Teacher
                 </span>
-                
-               
             </a>
         </li>
 
         
+        <li>
+          <a class="app-menu__item" href="{{ route('course.index') }}">
+            <i class="icofont-book-alt"></i>
+              <span class="app-menu__label">
+                  Course
+              </span>
+          </a>
+      </li>
+      <li>
+        <a class="app-menu__item" href="{{ route('student.index') }}">
+            <i class="app-menu__icon icofont-users-social"></i>
+            <span class="app-menu__label">
+                Student
+            </span>
+        </a>
+    </li>
 
        
     
@@ -149,7 +128,7 @@
     @yield('content')
 
     <script src="{{asset('backend/js/jquery-3.3.1.min.js')}}"></script>
-    {{-- <script src="{{asset('backend/js/popper.min.js')}}"></script> --}}
+    <script src="{{asset('backend/js/popper.min.js')}}"></script>
     <script src="{{asset('backend/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('backend/js/main.js')}}"></script>
     <!-- The javascript plugin to display page loading on top-->
@@ -172,7 +151,6 @@
       }
     </script>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @yield('script')
   </body>
 </html>
