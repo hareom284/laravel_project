@@ -237,7 +237,23 @@ h1, h2, h3, h4, h5, h6 {
           <li class="nav-item"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
 
          @auth
-          <li class="nav-item"><a href="{{ route('signout') }}" class="nav-link">Signout</a></li>
+         <li class="nav-item dropdown">
+            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                {{ Auth::user()->name }}
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
+            </div>
+        </li>
           @else
            <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Sign</a></li>
           <li class="nav-item"><a href="{{ route('student.create') }}" class="nav-link">Sign Up</a></li>
