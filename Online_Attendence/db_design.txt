@@ -1,0 +1,31 @@
+==>Student                          |
+   -id 
+   -user_id
+   -course_id
+   -phon_no
+   -rollno
+   -profile
+   -address
+--------------------------------------
+==>Teacher
+   -id
+   -user_id
+   -course_id
+   -phone_no
+   -profile
+   -profession(x)
+---------------------------------------  
+==>Course
+   -id
+   -name
+   -photo
+   -no_of_times
+   -description
+---------------------------------------
+
+==>Attendance
+   -id
+   -count
+   -course_id
+   -student_id
+   
